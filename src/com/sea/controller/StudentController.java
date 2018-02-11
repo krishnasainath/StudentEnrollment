@@ -4,12 +4,14 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.sea.repository.StudentRepository;
 
+@WebServlet("StudentController")
 public class StudentController extends HttpServlet {
 	
 	/**
@@ -29,15 +31,17 @@ public class StudentController extends HttpServlet {
 		studentRepository = new StudentRepository();
 	}
 	
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String forward = STUDENT_SIGNUP;
 		RequestDispatcher view = request.getRequestDispatcher(forward);
 	    view.forward(request, response);
 	}
 	
+	@Override
 	protected void doPost(HttpServletRequest request,
 	          HttpServletResponse response) throws ServletException, IOException {
-	      String pageName = request.getParameter("pageName");
+	      String pageName = request.getParameter("Signup.jsp");
 	      String forward = "";        
 	      
 	      if (studentRepository != null) {

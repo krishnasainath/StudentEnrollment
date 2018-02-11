@@ -23,7 +23,7 @@
 <div class="limiter">
 		<div class="container-login100" style="background-image: url('StyleContent/images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="${pageContext.request.contextPath}/StudentController" method="post">
 					<span class="login100-form-title p-b-49">
 						Sign Up
 					</span>
@@ -57,11 +57,20 @@
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 					
-					<div class="container-login100-form-btn">
+					<div class="container-login100-form-btn m-b-23">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
 							<button class="login100-form-btn">
 								Submit
+							</button>
+						</div>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Cancel
 							</button>
 						</div>
 					</div>
