@@ -9,6 +9,7 @@
 <body>
 <center>
 	<h1 align="center"><b>Student Enrollment Application</b></h1>
+	<a href="Login.jsp">Login</a>
 </center>
 </body>
 </html>
