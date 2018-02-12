@@ -42,7 +42,7 @@ public class StudentController extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 	          HttpServletResponse response) throws ServletException, IOException {
 	      String pageName = request.getParameter("Signup.jsp");
-	      String forward = "";        
+	      String forward = "";
 	      
 	      if (studentRepository != null) {
 	          if (pageName.equals("signup")) {
